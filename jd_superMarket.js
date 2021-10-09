@@ -1,7 +1,7 @@
 /*
 东东超市
 Last Modified time: 2021-09-04 19:42:00
-Modified By X1a0He
+Last Modified By X1a0He
 活动入口：京东APP首页-京东超市-底部东东超市
 Some Functions Modified From https://github.com/Zero-S1/JD_tools/blob/master/JD_superMarket.py
 东东超市兑换奖品请使用此脚本 jd_blueCoin.js
@@ -35,13 +35,10 @@ let joinPkTeam = true; //是否自动加入PK队伍
 let message = '',
     subTitle;
 const JD_API_HOST = 'https://api.m.jd.com/api';
-
 //助力好友分享码
 //此此内容是IOS用户下载脚本到本地使用，填写互助码的地方，同一京东账号的好友互助码请使用@符号隔开。
-//下面给出两个账号的填写示例（iOS只支持2个京东账号）
-let shareCodes = []
-
-    !(async () => {
+let shareCodes = [] 
+!(async () => {
         await requireConfig();
         if (!cookiesArr[0]) {
             $.msg($.name, '【提示】请先获取京东账号一cookie\n直接使用NobyDa的京东签到获取', 'https://bean.m.jd.com/bean/signIndex.action', {
@@ -64,10 +61,7 @@ let shareCodes = []
                     $.msg($.name, `【提示】cookie已失效`, `京东账号${$.index} ${$.nickName || $.UserName}\n请重新登录获取\nhttps://bean.m.jd.com/bean/signIndex.action`, {
                         "open-url": "https://bean.m.jd.com/bean/signIndex.action"
                     });
-
-                    if ($.isNode()) {
-                        await notify.sendNotify(`${$.name}cookie已失效 - ${$.UserName}`, `京东账号${$.index} ${$.UserName}\n请重新登录获取cookie`);
-                    }
+                    if ($.isNode()) await notify.sendNotify(`${$.name}cookie已失效 - ${$.UserName}`, `京东账号${$.index} ${$.UserName}\n请重新登录获取cookie`);
                     continue
                 }
                 message = '';
@@ -103,40 +97,12 @@ async function jdSuperMarket() {
         // await limitTimeProduct();
         await smtg_shopIndex();
         await smtg_newHome_xh();
-        await receiveUserUpgradeBlue()
         // await smtgHome();
+        await receiveUserUpgradeBlue();
         // await Home();
-        if (helpAu === true) {
-            await helpAuthor();
-        }
+        if (helpAu === true) await helpAuthor();
     } catch (e) {
         $.logErr(e)
-    }
-}
-
-//领取店铺升级的蓝币奖励和营业额
-async function receiveUserUpgradeBlue() {
-    // $.receiveUserUpgradeBlue = 0;
-    // if ($.userUpgradeBlueVos && $.userUpgradeBlueVos.length > 0) {
-    //     for (let item of $.userUpgradeBlueVos) {
-    //         const receiveCoin = await smtgReceiveCoin({
-    //             "id": item.id,
-    //             "type": 5
-    //         })
-    //         // $.log(`\n${JSON.stringify(receiveCoin)}`)
-    //         if (receiveCoin && receiveCoin.data['bizCode'] === 0) {
-    //             $.receiveUserUpgradeBlue += receiveCoin.data.result['receivedBlue']
-    //         }
-    //     }
-    //     $.log(`店铺升级奖励获取:${$.receiveUserUpgradeBlue}蓝币\n`)
-    // }
-    const res = await smtgReceiveCoin({
-        "type": 4,
-        "channel": "18"
-    })
-    // $.log(`${JSON.stringify(res)}\n`)
-    if (res && res.data['bizCode'] === 0) {
-        console.log(`\n收取营业额：获得 ${res.data.result['receivedTurnover']}\n`);
     }
 }
 
@@ -1013,6 +979,31 @@ async function limitTimeProduct() {
         } else {
             console.log(`限时商品已经上架或暂无限时商品`);
         }
+    }
+}
+//领取店铺升级的蓝币奖励
+async function receiveUserUpgradeBlue() {
+    $.receiveUserUpgradeBlue = 0;
+    if ($.userUpgradeBlueVos && $.userUpgradeBlueVos.length > 0) {
+        for (let item of $.userUpgradeBlueVos) {
+            const receiveCoin = await smtgReceiveCoin({
+                "id": item.id,
+                "type": 5
+            })
+            // $.log(`\n${JSON.stringify(receiveCoin)}`)
+            if (receiveCoin && receiveCoin.data['bizCode'] === 0) {
+                $.receiveUserUpgradeBlue += receiveCoin.data.result['receivedBlue']
+            }
+        }
+        $.log(`店铺升级奖励获取:${$.receiveUserUpgradeBlue}蓝币\n`)
+    }
+    const res = await smtgReceiveCoin({
+        "type": 4,
+        "channel": "18"
+    })
+    // $.log(`${JSON.stringify(res)}\n`)
+    if (res && res.data['bizCode'] === 0) {
+        console.log(`\n收取营业额：获得 ${res.data.result['receivedTurnover']}\n`);
     }
 }
 async function Home() {
