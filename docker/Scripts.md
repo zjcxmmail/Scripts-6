@@ -13,34 +13,30 @@
 |jd_joy_steal.js						|宠汪汪偷好友积分与狗粮		|2021/10/9	|smiek2221/scripts		|				|
 |jd_joy.js								|宠汪汪						|2021/10/9	|smiek2221/scripts		|				|
 |gua_opencard43.js						|惠聚京东 好物连连			|2021/10/12	|smiek2221/scripts		|10.11~10.26	|
-|										|							|			|						|				|
-|										|							|			|						|				|
-|jd_bean_change.js						|京东资产变动通知			|2021/10/12	|ccwav/QLScript2		|				|
+|jd_bean_change.js						|京东资产变动通知			|2021/10/13	|ccwav/QLScript2		|				|
 |jd_big_winner_Mod.js					|省钱大赢家之翻翻乐			|2021/10/12	|ccwav/QLScript2		|				|
-|jd_CheckCK.js							|京东CK检测					|2021/10/9	|ccwav/QLScript2		|				|
-|jd_joy_reward_Mod.js					|宠汪汪积分兑换有就换版		|2021/10/9	|ccwav/QLScript2		|				|
-|jd_speed_sign_Part1.js					|京东极速版任务1				|2021/10/9	|ccwav/QLScript2		|				|
-|jd_speed_sign_Part2.js					|京东极速版任务2				|2021/10/9	|ccwav/QLScript2		|				|
-|jd_speed_sign_Part3.js					|京东极速版任务3				|2021/10/9	|ccwav/QLScript2		|				|
-|jd_DailyBonus_Mod.js					|京东多合一签到脚本			|2021/10/12	|ccwav/QLScript2		|				|
-|sendNotify.js							|依赖文件					|2021/10/12	|ccwav/QLScript2		|				|
-|										|							|			|						|				|
+|jd_CheckCK.js							|京东CK检测					|2021/10/13	|ccwav/QLScript2		|				|
+|jd_joy_reward_Mod.js					|宠汪汪积分兑换有就换版		|2021/10/13	|ccwav/QLScript2		|				|
+|jd_speed_sign_Part1.js					|京东极速版任务1				|2021/10/12	|ccwav/QLScript2		|				|
+|jd_speed_sign_Part2.js					|京东极速版任务2				|2021/10/12	|ccwav/QLScript2		|				|
+|jd_speed_sign_Part3.js					|京东极速版任务3				|2021/10/12	|ccwav/QLScript2		|				|
+|jd_DailyBonus_Mod.js					|京东多合一签到脚本			|2021/10/13	|ccwav/QLScript2		|				|
+|sendNotify.js							|依赖文件					|2021/10/13	|ccwav/QLScript2		|				|
+|ql.js									|依赖文件					|2021/10/12	|ccwav/QLScript2		|				|
 |jd_haier.js							|海尔京东超级品牌日			|2021/10/10	|Star261/jd				|				|
 |jd_honour.js							|荣耀新品传送挑战			|2021/10/9	|Star261/jd				|				|
-|jd_yijia.js							|一加						|2021/10/9	|Star261/jd				|10.8 - 11.13	|
+|jd_yijia.js							|一加						|2021/10/13	|Star261/jd				|10.8 - 11.13	|
 |jd_jxmc.js								|京喜牧场					|2021/10/9	|Star261/jd				|				|
 |jd_ddworld.js							|东东游戏					|2021/10/10	|Star261/jd				|				|
 |jd_lucky_egg.js						|幸运扭蛋					|2021/10/12	|Star261/jd				|				|
-|										|							|			|						|				|
-|										|							|			|						|				|
-|jd_beauty_twelfth.js					|美妆周年庆					|2021/10/9	|shufflewzc/faker2		|				|
+|jd_beauty_twelfth.js					|美妆周年庆					|2021/10/13	|Star261/jd				|				|
 |jd_fansa.js							|超店会员福利社				|2021/10/9	|shufflewzc/faker2		|				|
 |USER_AGENTS.js							|依赖文件					|2021/10/11	|shufflewzc/faker2		|				|
 |jd_car_exchange.js						|京东汽车兑换				|2021/10/11	|shufflewzc/faker2		|				|
 |JS_USER_AGENTS.js						|依赖文件					|2021/10/11	|shufflewzc/faker2		|				|
 |jd_industrial_task.js					|京东工业品任务				|2021/10/12	|shufflewzc/faker2		|				|
 |jd_dddh.js								|东东世界兑换				|2021/10/12	|shufflewzc/faker2		|				|
-|										|							|			|						|				|
+|jd_tyt.js								|柠檬推一推					|2021/10/13	|shufflewzc/faker2		|				|
 |jd_moneyTree_help.js					|京东摇钱树助力				|2021/10/9	|zero205/JD_tencent_scf	|				|
 |jd_zjb.js								|柠檬赚金币					|2021/10/10	|zero205/JD_tencent_scf	|				|
 |jd_speed_sign.js						|京东极速版					|2021/10/10	|zero205/JD_tencent_scf	|				|
@@ -48,27 +44,21 @@
 |jd_fan.js								|粉丝互动					|2021/10/10	|zero205/JD_tencent_scf	|				|
 |jd_get_share_code.js					|获取互助码					|2021/10/11	|zero205/JD_tencent_scf	|				|
 |jd_bean_sign.js						|京东多合一签到SCF开始		|2021/10/11	|zero205/JD_tencent_scf	|				|
-|										|							|			|						|				|
 |jd_price.js							|京东保价					|2021/10/9	|Aaron-lv/sync			|				|
-|										|							|			|						|				|
-|										|							|			|						|				|
 |jddj_bean.js							|京东到家鲜豆任务			|2021/10/10	|Passerby-b/JDDJ		|				|
 |jddj_fruit.js							|京东到家果园任务			|2021/10/10	|Passerby-b/JDDJ		|				|
 |jddj_fruit_collectWater.js				|京东到家果园水车收水滴		|2021/10/10	|Passerby-b/JDDJ		|				|
 |jddj_getPoints.js						|京东到家鲜豆庄园收水滴		|2021/10/10	|Passerby-b/JDDJ		|				|
 |jddj_plantBeans.js						|京东到家鲜豆庄园			|2021/10/10	|Passerby-b/JDDJ		|				|
-|jddjCookie.js							|京东到家Cookie				|2021/10/10	|Passerby-b/JDDJ		|				|
 |jd_all_bean_change.js					|京东月资产变动通知			|			|						|				|
 |jd_angryCash.js						|愤怒的现金					|			|						|				|
 |jd_angryKoi.js							|愤怒的锦鲤					|			|						|				|
 |jd_bean_home.js						|领京豆额外奖励				|			|						|				|
-|										|							|			|						|				|
 |jd_beauty.js							|美丽研究院					|			|						|				|
 |jd_blueCoin.js							|东东超市兑换奖品			|			|						|				|
 |jd_blueCoin.py							|东东超市商品兑换			|			|						|				|
 |jd_bookshop.js							|口袋书店					|			|						|				|
 |jd_car.js								|京东汽车					|			|						|				|
-|										|							|			|						|				|
 |jd_cash.js								|签到领现金					|			|						|				|
 |jd_ccSign.js							|领券中心签到				|			|						|				|
 |jd_cfd.js								|京喜财富岛					|			|						|				|
@@ -93,7 +83,6 @@
 |jd_fcffl.js							|发财翻翻乐					|			|						|				|
 |jd_fruit.js							|东东农场					|			|						|				|
 |jd_getFollowGift.py					|JD 关注有礼					|			|						|				|
-|										|							|			|						|				|
 |jd_gold_creator.js						|金榜创造营					|			|						|				|
 |jd_goodMorning.js						|早起福利					|			|						|				|
 |jd_health.js							|东东健康社区				|			|						|				|
@@ -101,7 +90,6 @@
 |jd_jdfactory.js						|东东工厂					|			|						|				|
 |jd_jdzz.js								|京东赚赚					|			|						|				|
 |jd_jin_tie.js							|领金贴						|			|						|				|
-|jd_jmf.js								|京东小魔方					|			|						|				|
 |jd_jmsign.js							|芥么签到					|			|						|				|
 |jd_joy_feedPets.js						|宠汪汪🐕喂食				|			|						|				|
 |jd_joy_park.js							|汪汪乐园养joy				|			|						|				|
@@ -150,17 +138,12 @@
 |jd_ylyn.js								|伊利养牛记					|			|						|				|
 |jx_aid_cashback.js						|京喜购物返红包助力			|			|						|				|
 |jx_sign.js								|京喜签到					|			|						|				|
-|										|							|			|						|				|
 |package-lock.json						|							|			|						|				|
 |package.json							|							|			|						|				|
-|ql.js									|							|			|						|				|
 |README.md								|							|			|						|				|
 |sendNotify.py							|							|			|						|				|
 |sign									|							|			|						|				|
 |sign_graphics_validate.js				|							|			|						|				|
 |TS_USER_AGENTS.js						|							|			|						|				|
-|										|							|			|						|				|
-|WSKEY README.md						|							|			|						|				|
-|wskey.py								|							|			|						|				|
 |ZooFaker_Necklace.js					|							|			|						|				|
 |JS1_USER_AGENTS.js						|							|			|						|				|
