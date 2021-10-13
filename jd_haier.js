@@ -1,3 +1,7 @@
+if (!["card","car"].includes(process.env.FS_LEVEL)) {
+    console.log("请设置通用加购/开卡变量FS_LEVEL=car(或card开卡+加购)来运行加购脚本")
+    return
+}
 /*
 * 活动：海尔店铺活动
 * https://lzdz4-isv.isvjcloud.com/dingzhi/haier/active/activity?activityId=dz2109100000178201&shareUuid=
