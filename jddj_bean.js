@@ -13,7 +13,7 @@ cron "10 0 * * *" script-path=https://raw.githubusercontent.com/passerby-b/JDDJ/
 
 */
 
-const $ = new API("京东到家鲜豆任务");
+const $ = new API("jddj_bean");
 let ckPath = './jdCookie.js';//ck路径,环境变量:JDDJ_CKPATH
 let cookies = [];
 let thiscookie = '', deviceid = '';
@@ -213,13 +213,17 @@ async function taskLoginUrl(thiscookie) {
                 let ckstr = '';
                 await $.http.get(option).then(async response => {
                     //console.log(response);
-                    if (response.body.indexOf('请求成功') > -1) {
+                    let body = JSON.parse(response.body);
+                    if (body.code == 0) {
                         for (const key in response.headers) {
                             if (key.toLowerCase().indexOf('cookie') > -1) {
                                 ckstr = response.headers[key].toString();
                             }
                         }
                         ckstr += ';deviceid_pdj_jd=' + deviceid;
+                    }
+                    else {
+                        console.log(body.msg);
                     }
                 });
                 resolve(ckstr);
