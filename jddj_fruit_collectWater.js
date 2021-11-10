@@ -14,7 +14,7 @@ TG群:https://t.me/passerbyb2021
 //cron "5 */1 * * *" script-path=https://raw.githubusercontent.com/passerby-b/JDDJ/main/jddj_fruit_collectWater.js,tag=京东到家果园水车收水滴
 //
 
-const $ = new API("京东到家果园水车收水滴");
+const $ = new API("jddj_fruit_collectWater");
 let ckPath = './jdCookie.js';//ck路径,环境变量:JDDJ_CKPATH
 let cookies = [];
 let thiscookie = '', deviceid = '';
@@ -265,13 +265,17 @@ async function taskLoginUrl(thiscookie) {
                 let ckstr = '';
                 await $.http.get(option).then(async response => {
                     //console.log(response);
-                    if (response.body.indexOf('请求成功') > -1) {
+                    let body = JSON.parse(response.body);
+                    if (body.code == 0) {
                         for (const key in response.headers) {
                             if (key.toLowerCase().indexOf('cookie') > -1) {
                                 ckstr = response.headers[key].toString();
                             }
                         }
                         ckstr += ';deviceid_pdj_jd=' + deviceid;
+                    }
+                    else {
+                        console.log(body.msg);
                     }
                 });
                 resolve(ckstr);
